@@ -17,9 +17,7 @@
 #define VERNIER_H
 
 #include <array>
-#include <functional>
 #include <iterator>
-#include <optional>
 #include <string_view>
 #include <vector>
 
