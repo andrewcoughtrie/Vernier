@@ -31,7 +31,7 @@ contains
 
   subroutine setup(this)
     implicit none
-    
+
     class(test_vernier_type), intent(inout) :: this
 
   end subroutine setup
@@ -42,7 +42,7 @@ contains
 
   subroutine teardown(this)
     implicit none
-    
+
     class(test_vernier_type), intent(inout) :: this
 
   end subroutine teardown

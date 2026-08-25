@@ -186,7 +186,8 @@ size_t meto::Vernier::start_part2(std::string_view const region_name) {
  *        fractional error from precision limitations of the clock.
  */
 
-void meto::Vernier::stop_impl(size_t const hash, double *const return_region_duration) {
+void meto::Vernier::stop_impl(size_t const hash,
+                              double *const return_region_duration) {
 
   // Log the region stop time.
   auto region_stop_time = vernier_gettime();
@@ -274,15 +275,14 @@ void meto::Vernier::stop_impl(size_t const hash, double *const return_region_dur
   *profiler_overhead_time_ptr += calliper_time;
 }
 
-void meto::Vernier::stop(size_t const hash){
-  stop_impl(hash);
-}
+void meto::Vernier::stop(size_t const hash) { stop_impl(hash); }
 
 void meto::Vernier::stop(size_t const hash, double &return_region_duration) {
   stop_impl(hash, &return_region_duration);
 }
 
-void meto::Vernier::stop(size_t const hash, double * const return_region_duration) {
+void meto::Vernier::stop(size_t const hash,
+                         double *const return_region_duration) {
   stop_impl(hash, return_region_duration);
 }
 /**
