@@ -85,7 +85,8 @@ void meto::c_vernier_start_part2(long int &hash_out, char const *name) {
 /**
  * @brief  Stop timing the region with the specified handle.
  * @param [in] hash_in Hash value of the region to stop timing.
- * @param [out] region_duration  The optional returned total wallclock time for the region.
+ * @param [out] region_duration  The optional returned total wallclock time for
+ *                               the region.
  */
 
 void c_vernier_stop(long int const &hash_in, double *const region_duration) {
