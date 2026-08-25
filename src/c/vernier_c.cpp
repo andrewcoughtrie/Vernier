@@ -95,11 +95,7 @@ void c_vernier_stop(long int const &hash_in, double *const region_duration) {
   // Ensure that the source and destination have the same size.
   static_assert(sizeof(hash) == sizeof(hash_in), "Hash/In size mismatch.");
   std::memcpy(&hash, &hash_in, sizeof(hash));
-  if (region_duration) {
-    meto::vernier.stop(hash, *region_duration);
-  } else {
-    meto::vernier.stop(hash);
-  }
+  meto::vernier.stop(hash, region_duration);
 }
 
 /**
